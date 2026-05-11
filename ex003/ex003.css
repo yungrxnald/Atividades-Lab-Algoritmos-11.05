@@ -1,0 +1,104 @@
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+td {
+  width: 60px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 30px;
+  width: 60%;
+  padding: 40px;
+  transform: scale(1.1);
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+label {
+    margin-bottom: 20px;
+    color: white;
+}
+
+button {
+  position: relative;
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  background: #222;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3 ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 14px;
+  background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, purple, red);
+  background-size: 300%;
+  animation: rgb 12s linear infinite;
+  z-index: -1;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #222;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@keyframes rgb {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
+}
+
+button:hover {
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25 px rgba(0,0,0,0.4);
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+#tabela {
+  margin-top: 20px;
+  font-size: 22px;
+  color: white;
+}
